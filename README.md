@@ -18,6 +18,18 @@ Pull request to main or push to main
 
 Tests run first so a broken application stops the pipeline before container work. Pull requests build the image to catch Dockerfile problems, but do not publish it. Publishing is restricted to pushes on `main` so review changes cannot replace the shared `latest` image.
 
+## Pipeline Execution
+
+The GitHub Actions workflow was successfully executed on the `main` branch.
+
+All three pipeline jobs completed successfully:
+
+1. **Run Python tests** — executed the automated test suite.
+2. **Build container image** — built the Docker image.
+3. **Publish image to GHCR** — published the container image to GitHub Container Registry.
+
+![Successful GitHub Actions pipeline](screenshots/github-actions-success.png)
+
 ## Technology stack
 
 - Python 3.12 and Flask for the HTTP application
